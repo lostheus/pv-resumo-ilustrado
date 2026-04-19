@@ -8,7 +8,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;700;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"></noscript>
 
     <!-- Meta Pixel Code -->
     <script>
@@ -1258,7 +1259,7 @@
                     <!-- Modo 1 -->
                     <div id="mod1" class="tab-pane active">
                         <div>
-                            <img src="./cap-01.jpg" alt="Preview Módulo 1" style="border-radius: 12px; width: 100%; box-shadow: var(--shadow-sm);">
+                            <img loading="lazy" decoding="async" src="./cap-01.jpg" alt="Preview Módulo 1" style="border-radius: 12px; width: 100%; box-shadow: var(--shadow-sm);">
                         </div>
                         <div>
                             <div class="module-header" style="margin-bottom: 1rem;">
@@ -1275,7 +1276,7 @@
                     <!-- Modo 2 -->
                     <div id="mod2" class="tab-pane">
                         <div>
-                            <img src="./cap-02.jpg" alt="Preview Módulo 2" style="border-radius: 12px; width: 100%; box-shadow: var(--shadow-sm);">
+                            <img loading="lazy" decoding="async" src="./cap-02.jpg" alt="Preview Módulo 2" style="border-radius: 12px; width: 100%; box-shadow: var(--shadow-sm);">
                         </div>
                         <div>
                             <div class="module-header" style="margin-bottom: 1rem;">
@@ -1292,7 +1293,7 @@
                     <!-- Modo 3 -->
                     <div id="mod3" class="tab-pane">
                         <div>
-                            <img src="./cap-03.jpg" alt="Preview Módulo 3" style="border-radius: 12px; width: 100%; box-shadow: var(--shadow-sm);">
+                            <img loading="lazy" decoding="async" src="./cap-03.jpg" alt="Preview Módulo 3" style="border-radius: 12px; width: 100%; box-shadow: var(--shadow-sm);">
                         </div>
                         <div>
                             <div class="module-header" style="margin-bottom: 1rem;">
@@ -1309,7 +1310,7 @@
                     <!-- Modo 4 -->
                     <div id="mod4" class="tab-pane">
                         <div>
-                            <img src="./cap-04.jpg" alt="Preview Módulo 4" style="border-radius: 12px; width: 100%; box-shadow: var(--shadow-sm);">
+                            <img loading="lazy" decoding="async" src="./cap-04.jpg" alt="Preview Módulo 4" style="border-radius: 12px; width: 100%; box-shadow: var(--shadow-sm);">
                         </div>
                         <div>
                             <div class="module-header" style="margin-bottom: 1rem;">
@@ -1326,7 +1327,7 @@
                     <!-- Modo 5 -->
                     <div id="mod5" class="tab-pane">
                         <div>
-                            <img src="./cap-05.jpg" alt="Preview Módulo 5" style="border-radius: 12px; width: 100%; box-shadow: var(--shadow-sm);">
+                            <img loading="lazy" decoding="async" src="./cap-05.jpg" alt="Preview Módulo 5" style="border-radius: 12px; width: 100%; box-shadow: var(--shadow-sm);">
                         </div>
                         <div>
                             <div class="module-header" style="margin-bottom: 1rem;">
@@ -1343,7 +1344,7 @@
                     <!-- Modo 6 -->
                     <div id="mod6" class="tab-pane">
                         <div>
-                            <img src="./cap-06.jpg" alt="Preview Módulo 6" style="border-radius: 12px; width: 100%; box-shadow: var(--shadow-sm);">
+                            <img loading="lazy" decoding="async" src="./cap-06.jpg" alt="Preview Módulo 6" style="border-radius: 12px; width: 100%; box-shadow: var(--shadow-sm);">
                         </div>
                         <div>
                             <div class="module-header" style="margin-bottom: 1rem;">
@@ -1360,7 +1361,7 @@
                     <!-- Modo 7 -->
                     <div id="mod7" class="tab-pane">
                         <div>
-                            <img src="./cap-07.jpg" alt="Preview Módulo 7" style="border-radius: 12px; width: 100%; box-shadow: var(--shadow-sm);">
+                            <img loading="lazy" decoding="async" src="./cap-07.jpg" alt="Preview Módulo 7" style="border-radius: 12px; width: 100%; box-shadow: var(--shadow-sm);">
                         </div>
                         <div>
                             <div class="module-header" style="margin-bottom: 1rem;">
@@ -1429,9 +1430,9 @@
                 
                 <!-- Área reservada para inserir imagens de demonstração -->
                 <div class="demo-gallery" style="display: flex; flex-direction: column; gap: 1.5rem; align-items: center; width: 100%; margin-top: 1.5rem;">
-                    <img src="./carrossel-01.jpg" alt="Demonstração 1" style="border-radius: 8px; box-shadow: 0 6px 15px rgba(0,0,0,0.2); width: 100%; max-width: 600px; height: auto;">
-                    <img src="./carrossel-02.jpg" alt="Demonstração 2" style="border-radius: 8px; box-shadow: 0 6px 15px rgba(0,0,0,0.2); width: 100%; max-width: 600px; height: auto;">
-                    <img src="./carrossel-03.jpg" alt="Demonstração 3" style="border-radius: 8px; box-shadow: 0 6px 15px rgba(0,0,0,0.2); width: 100%; max-width: 600px; height: auto;">
+                    <img loading="lazy" decoding="async" src="./carrossel-01.jpg" alt="Demonstração 1" style="border-radius: 8px; box-shadow: 0 6px 15px rgba(0,0,0,0.2); width: 100%; max-width: 600px; height: auto;">
+                    <img loading="lazy" decoding="async" src="./carrossel-02.jpg" alt="Demonstração 2" style="border-radius: 8px; box-shadow: 0 6px 15px rgba(0,0,0,0.2); width: 100%; max-width: 600px; height: auto;">
+                    <img loading="lazy" decoding="async" src="./carrossel-03.jpg" alt="Demonstração 3" style="border-radius: 8px; box-shadow: 0 6px 15px rgba(0,0,0,0.2); width: 100%; max-width: 600px; height: auto;">
                 </div>
             </div>
         </div>
