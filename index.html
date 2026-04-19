@@ -1,0 +1,1918 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resumo Ilustrado — Nutrição Clínica</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;700;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', 'SEU_PIXEL_ID_AQUI');
+    fbq('track', 'PageView');
+    </script>
+    <noscript>
+      <img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=SEU_PIXEL_ID_AQUI&ev=PageView&noscript=1"/>
+    </noscript>
+    <!-- End Meta Pixel Code -->
+
+    <style>
+        :root {
+            --color-primary: #2D6A4F;
+            --color-primary-light: #40916C;
+            --color-primary-dark: #0B2516;
+            --color-accent: #FF7A00;
+            --color-accent-hover: #FF5500;
+            --color-background: #F8F9FA;
+            --color-surface: #FFFFFF;
+            --color-text-primary: #11181C;
+            --color-text-secondary: #344E41;
+            --color-highlight: #D8F3DC;
+            --color-warning: #FFB703;
+            --color-border: #E9ECEF;
+
+            --font-display: 'Outfit', sans-serif;
+            --font-body: 'Inter', sans-serif;
+            --font-accent: 'Outfit', sans-serif;
+            
+            --border-radius-sm: 8px;
+            --border-radius-md: 16px;
+            --border-radius-lg: 24px;
+            
+            --shadow-sm: 0 4px 6px rgba(27, 67, 50, 0.05);
+            --shadow-md: 0 10px 25px rgba(27, 67, 50, 0.1);
+            --shadow-lg: 0 20px 40px rgba(27, 67, 50, 0.2);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-body);
+            background-color: var(--color-background);
+            color: var(--color-text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: var(--font-display);
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        h1 { font-size: 2.5rem; }
+        h2 { font-size: 2rem; }
+        h3 { font-size: 1.5rem; }
+
+        @media (min-width: 768px) {
+            h1 { font-size: 3.5rem; }
+            h2 { font-size: 2.5rem; }
+            h3 { font-size: 1.75rem; }
+        }
+
+        p {
+            font-size: 1rem;
+            color: var(--color-text-secondary);
+        }
+
+        @media (min-width: 768px) {
+            p { font-size: 1.125rem; }
+        }
+
+        img, svg {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        /* Utility Classes */
+        .text-center { text-align: center; }
+        .text-white { color: var(--color-surface); }
+        .text-primary { color: var(--color-primary-dark); }
+        .text-accent { color: var(--color-accent); }
+        .bg-white { background-color: var(--color-surface); }
+        .bg-light { background-color: var(--color-background); }
+        .bg-highlight { background-color: var(--color-highlight); }
+        .mt-4 { margin-top: 1rem; }
+        .mt-8 { margin-top: 2rem; }
+        .mb-2 { margin-bottom: 0.5rem; }
+        .mb-4 { margin-bottom: 1rem; }
+        .mb-8 { margin-bottom: 2rem; }
+        .py-16 { padding-top: 2.5rem; padding-bottom: 2.5rem; }
+        @media (min-width: 768px) {
+            .py-16 { padding-top: 6rem; padding-bottom: 6rem; }
+        }
+
+        /* Buttons & Badges */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            background-color: var(--color-accent);
+            color: var(--color-surface);
+            font-family: var(--font-body);
+            font-weight: 900;
+            font-size: 1.25rem;
+            text-transform: uppercase;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            padding: 1.3rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(244, 162, 97, 0.4);
+            width: 100%;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        @media (min-width: 768px) {
+            .btn { font-size: 1.25rem; }
+        }
+
+        .btn:hover {
+            background-color: var(--color-accent-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(231, 111, 81, 0.5);
+        }
+
+        .btn-pulse {
+            animation: pulse-animation 2s infinite;
+        }
+
+        @keyframes pulse-animation {
+            0% { box-shadow: 0 0 0 0 rgba(244, 162, 97, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(244, 162, 97, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(244, 162, 97, 0); }
+        }
+
+        .badge {
+            display: inline-block;
+            font-family: var(--font-accent);
+            font-size: 1.05rem;
+            padding: 0.6rem 1.2rem;
+            border-radius: 50px;
+            font-weight: 500;
+            margin-bottom: 1.5rem;
+        }
+
+        .badge-primary {
+            background-color: rgba(216, 243, 220, 0.15);
+            border: 1px solid var(--color-highlight);
+            color: var(--color-surface);
+        }
+
+        .badge-secondary {
+            background-color: var(--color-highlight);
+            color: var(--color-primary-dark);
+            border: 1px solid var(--color-border);
+        }
+
+        /* Top Urgency Bar */
+        .top-bar {
+            background-color: var(--color-warning);
+            color: var(--color-text-primary);
+            text-align: center;
+            padding: 0.75rem 1rem;
+            font-weight: 600;
+            font-size: 0.875rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        @media (min-width: 768px) {
+            .top-bar { font-size: 1rem; }
+        }
+
+        .timer { font-family: var(--font-accent); font-weight: 500; }
+
+        /* Sticky Header */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1rem 0;
+            z-index: 100;
+            box-shadow: var(--shadow-sm);
+            transform: translateY(-100%);
+            transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .header.visible {
+            transform: translateY(0);
+        }
+
+        .header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header-logo {
+            font-family: var(--font-accent);
+            color: var(--color-primary-dark);
+            font-weight: 500;
+            font-size: 1.125rem;
+            text-decoration: none;
+        }
+
+        .header-btn {
+            background-color: var(--color-accent);
+            color: var(--color-surface);
+            padding: 0.6rem 1.2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.875rem;
+            transition: background-color 0.3s;
+        }
+
+        .header-btn:hover { background-color: var(--color-accent-hover); }
+
+        /* Hero Section */
+        .hero {
+            background-color: var(--color-background);
+            padding: 3rem 0 1.5rem;
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .hero-title {
+            color: var(--color-primary-dark);
+            margin-bottom: 1.5rem;
+            letter-spacing: -1px;
+            font-weight: 900;
+        }
+
+        .hero-subtitle {
+            color: var(--color-text-secondary);
+            max-width: 700px;
+            margin: 0 auto 3rem;
+            font-weight: 500;
+            font-size: 1.15rem;
+            line-height: 1.6;
+        }
+
+        /* Video Container (9:16 Vertical) */
+        .video-wrapper {
+            position: relative;
+            max-width: 320px;
+            width: 100%;
+            margin: 0 auto 3rem;
+            border-radius: var(--border-radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+            border: 4px solid var(--color-surface);
+            background-color: #000;
+            aspect-ratio: 9 / 16;
+            z-index: 10;
+        }
+
+        .video-wrapper iframe, .video-wrapper video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .hero-security {
+            color: var(--color-primary-dark);
+            font-size: 0.875rem;
+            margin-top: 1rem;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .social-proof {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .proof-card {
+            background-color: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 0.75rem 1rem;
+            border-radius: var(--border-radius-sm);
+            color: var(--color-primary-dark);
+            font-size: 0.875rem;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        /* Lead Section */
+        .lead-section {
+            background-color: var(--color-background);
+        }
+
+        .lead-content {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .lead-text {
+            font-size: 1.125rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .highlight-card {
+            background-color: var(--color-highlight);
+            border-left: 4px solid var(--color-primary);
+            padding: 1.5rem;
+            border-radius: 0 var(--border-radius-sm) var(--border-radius-sm) 0;
+            margin: 2rem 0;
+        }
+
+        .highlight-card p {
+            color: var(--color-primary-dark);
+            font-weight: 500;
+            font-style: italic;
+            margin: 0;
+        }
+
+        .lead-transition {
+            font-weight: 600;
+            color: var(--color-primary-dark);
+            font-size: 1.25rem;
+            text-align: center;
+            margin-top: 2.5rem;
+        }
+
+        /* History Section */
+        .history-section {
+            background-color: var(--color-highlight);
+        }
+
+        .timeline {
+            max-width: 600px;
+            margin: 3rem auto 0;
+            position: relative;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            height: calc(100% - 40px);
+            width: 2px;
+            background-color: var(--color-border);
+            z-index: 1;
+        }
+
+        .timeline-card {
+            position: relative;
+            padding-left: 3.5rem;
+            margin-bottom: 2rem;
+            z-index: 2;
+        }
+
+        .timeline-icon {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 40px;
+            height: 40px;
+            background-color: var(--color-surface);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: var(--shadow-sm);
+            font-size: 1.2rem;
+            border: 2px solid var(--color-highlight);
+        }
+
+        .timeline-card.highlight .timeline-icon {
+            border-color: var(--color-accent);
+            background-color: rgba(244, 162, 97, 0.1);
+        }
+
+        .timeline-content {
+            background-color: var(--color-surface);
+            padding: 1.5rem;
+            border-radius: var(--border-radius-md);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .timeline-content p {
+            margin: 0;
+            font-size: 0.95rem;
+            color: var(--color-text-secondary);
+        }
+
+        .history-conclusion {
+            background-color: var(--color-surface);
+            border: 2px solid var(--color-primary);
+            padding: 1.5rem;
+            border-radius: var(--border-radius-md);
+            text-align: center;
+            margin: 3rem auto 0;
+            max-width: 800px;
+        }
+
+        .history-conclusion p {
+            color: var(--color-primary-dark);
+            font-weight: 600;
+            font-size: 1.125rem;
+            margin: 0;
+        }
+
+        /* Pitch Section */
+        .pitch-section {
+            background-color: var(--color-surface);
+        }
+
+        .pitch-header {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .feature-banner {
+            background: linear-gradient(90deg, var(--color-primary-light) 0%, var(--color-primary-dark) 100%);
+            color: var(--color-surface);
+            font-weight: 600;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            display: inline-block;
+            margin: 2rem 0 3rem;
+            box-shadow: var(--shadow-md);
+        }
+
+        .modules-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+
+        @media (min-width: 768px) {
+            .modules-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .module-card {
+            background-color: var(--color-surface);
+            border: 1px solid var(--color-background);
+            border-radius: var(--border-radius-md);
+            padding: 2rem;
+            box-shadow: var(--shadow-sm);
+            transition: transform 0.3s;
+        }
+
+        .module-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .module-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .module-icon {
+            font-size: 1.75rem;
+        }
+
+        .module-number {
+            font-family: var(--font-accent);
+            color: var(--color-primary-light);
+            font-weight: 600;
+            font-size: 1.25rem;
+        }
+
+        .module-title {
+            font-family: var(--font-display);
+            color: var(--color-primary-dark);
+            font-size: 1.25rem;
+        }
+
+        .module-card p {
+            font-size: 0.95rem;
+            margin: 0;
+        }
+
+        .differentials {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: var(--color-background);
+            padding: 2rem;
+            border-radius: var(--border-radius-lg);
+        }
+
+        .differentials ul {
+            list-style: none;
+        }
+
+        .differentials li {
+            position: relative;
+            padding-left: 2rem;
+            margin-bottom: 1rem;
+            color: var(--color-text-primary);
+            font-weight: 500;
+        }
+
+        .differentials li:last-child { margin-bottom: 0; }
+
+        .differentials li::before {
+            content: '✅';
+            position: absolute;
+            left: 0;
+            top: 2px;
+        }
+
+        /* Evidence Section */
+        .evidence-section {
+            background-color: var(--color-background);
+        }
+        
+        .evidence-header { text-align: center; margin-bottom: 3rem; }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        @media (min-width: 768px) {
+            .stats-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        .stat-card {
+            background-color: var(--color-surface);
+            padding: 2.5rem 1.5rem;
+            border-radius: var(--border-radius-md);
+            text-align: center;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .stat-number {
+            font-family: var(--font-display);
+            font-size: 3.5rem;
+            font-weight: 900;
+            line-height: 1;
+            margin-bottom: 1rem;
+        }
+
+        .stat-number.accent { color: var(--color-accent); }
+        .stat-number.primary { color: var(--color-primary); }
+
+        .stat-card p {
+            font-size: 0.95rem;
+            color: var(--color-text-primary);
+            font-weight: 500;
+            margin: 0;
+        }
+
+        .evidence-text {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto 3rem;
+            font-size: 1.125rem;
+            font-weight: 500;
+        }
+
+        .validated-card {
+            background-color: rgba(216, 243, 220, 0.4);
+            border: 2px solid var(--color-primary-light);
+            padding: 2rem;
+            border-radius: var(--border-radius-lg);
+            max-width: 800px;
+            margin: 0 auto 3rem;
+        }
+
+        .validated-title {
+            color: var(--color-primary-dark);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+            font-size: 1.25rem;
+        }
+
+        .preview-area {
+            background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 100%);
+            border-radius: var(--border-radius-lg);
+            padding: 3rem 2rem;
+            text-align: center;
+            color: var(--color-surface);
+            box-shadow: var(--shadow-lg);
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .preview-area h3 {
+            color: var(--color-surface);
+            margin-bottom: 1rem;
+        }
+
+        .preview-tags {
+            font-weight: 500;
+            color: var(--color-highlight);
+            margin-bottom: 2rem;
+        }
+
+        .preview-badge {
+            display: inline-block;
+            background-color: var(--color-surface);
+            color: var(--color-primary-dark);
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: 0.875rem;
+            font-weight: 600;
+        }
+
+        /* Offer Section */
+        .offer-section {
+            background-color: var(--color-primary-dark);
+            color: var(--color-surface);
+            text-align: center;
+        }
+
+        .offer-section h2 { color: var(--color-surface); }
+
+        .price-compare {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin: 2rem auto;
+            max-width: 600px;
+        }
+
+        @media (min-width: 768px) {
+            .price-compare {
+                flex-direction: row;
+                justify-content: center;
+            }
+        }
+
+        .compare-item {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 0.75rem 1rem;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            color: var(--color-highlight);
+        }
+
+        .vs-separator {
+            font-family: var(--font-display);
+            font-size: 2rem;
+            font-style: italic;
+            color: var(--color-primary-light);
+            margin: 2rem 0;
+            position: relative;
+        }
+
+        .vs-separator::before, .vs-separator::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            width: 50px;
+            height: 1px;
+            background-color: var(--color-primary-light);
+        }
+
+        .vs-separator::before { right: calc(50% + 30px); }
+        .vs-separator::after { left: calc(50% + 30px); }
+
+        .offer-card {
+            background-color: var(--color-surface);
+            color: var(--color-text-primary);
+            padding: 3rem 2rem;
+            border-radius: var(--border-radius-lg);
+            max-width: 500px;
+            margin: 0 auto 3rem;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
+        }
+
+        .offer-card-title {
+            color: var(--color-primary-dark);
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .price-slashed {
+            color: #9CA3AF;
+            text-decoration: line-through;
+            font-size: 1.25rem;
+            font-weight: 500;
+        }
+
+        .price-current {
+            font-family: var(--font-display);
+            font-size: 4.5rem;
+            color: var(--color-accent);
+            line-height: 1;
+            margin: 0.5rem 0 1rem;
+        }
+
+        .price-sub {
+            color: var(--color-text-secondary);
+            font-size: 0.95rem;
+            margin-bottom: 2rem;
+            font-weight: 500;
+        }
+
+        .offer-includes {
+            text-align: left;
+            margin-bottom: 2.5rem;
+        }
+
+        .offer-includes ul { list-style: none; }
+        .offer-includes li {
+            padding-left: 2rem;
+            margin-bottom: 0.75rem;
+            position: relative;
+            font-size: 0.95rem;
+        }
+
+        .offer-includes li::before {
+            content: '✅';
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        /* Guarantee Section */
+        .guarantee-section {
+            background-color: var(--color-background);
+        }
+
+        .guarantee-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+
+        @media (min-width: 768px) {
+            .guarantee-grid { grid-template-columns: repeat(2, 1fr); align-items: stretch;}
+        }
+
+        .g-card {
+            background-color: var(--color-surface);
+            padding: 2.5rem 2rem;
+            border-radius: var(--border-radius-md);
+            box-shadow: var(--shadow-sm);
+            height: 100%;
+        }
+
+        .g-card.safety { border-top: 4px solid var(--color-primary); }
+        .g-card.urgency { border-top: 4px solid var(--color-accent); }
+
+        .g-title {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 1rem;
+            font-size: 1.25rem;
+            color: var(--color-text-primary);
+        }
+
+        .two-choices {
+            background-color: var(--color-highlight);
+            padding: 2.5rem 2rem;
+            border-radius: var(--border-radius-lg);
+            max-width: 800px;
+            margin: 0 auto 3rem;
+            text-align: center;
+        }
+
+        .choice-title {
+            color: var(--color-primary-dark);
+            margin-bottom: 2rem;
+        }
+
+        .choices-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            text-align: left;
+        }
+
+        .choice-item {
+            padding: 1.5rem;
+            border-radius: var(--border-radius-sm);
+            display: flex;
+            gap: 1rem;
+        }
+
+        .choice-item.bad {
+            background-color: rgba(255, 183, 3, 0.1);
+        }
+
+        .choice-item.good {
+            background-color: rgba(45, 106, 79, 0.1);
+            border: 1px solid var(--color-primary-light);
+        }
+
+        .choice-icon { font-size: 1.5rem; }
+
+        /* FAQ Section */
+        .faq-section { background-color: var(--color-surface); }
+        .faq-header { text-align: center; margin-bottom: 3rem; }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background-color: var(--color-background);
+            border-radius: var(--border-radius-sm);
+            margin-bottom: 1rem;
+            overflow: hidden;
+            border: 1px solid var(--color-border);
+        }
+
+        .faq-question {
+            width: 100%;
+            text-align: left;
+            padding: 1.5rem;
+            background: none;
+            border: none;
+            color: var(--color-text-primary);
+            font-family: var(--font-body);
+            font-weight: 600;
+            font-size: 1.05rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .faq-icon {
+            color: var(--color-primary);
+            transition: transform 0.3s ease;
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            padding: 0 1.5rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+        }
+
+        .faq-item.active .faq-answer {
+            padding: 0 1.5rem 1.5rem;
+            max-height: 500px; /* arbitrary max-height larger than expected content */
+        }
+
+        /* Final Section */
+        .final-section {
+            background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 100%);
+            color: var(--color-surface);
+            text-align: center;
+        }
+
+        .final-title { color: var(--color-surface); margin-bottom: 0.5rem; }
+        .final-subtitle { color: var(--color-highlight); margin-bottom: 3rem; }
+
+        .final-grid {
+            display: grid;
+            gap: 2rem;
+            max-width: 900px;
+            margin: 0 auto 3rem;
+            align-items: center;
+        }
+
+        @media (min-width: 768px) {
+            .final-grid { grid-template-columns: 1fr 1fr; text-align: left; }
+        }
+
+        .final-checklist {
+            list-style: none;
+        }
+
+        .final-checklist li {
+            padding-left: 2rem;
+            margin-bottom: 1rem;
+            position: relative;
+            font-size: 1.05rem;
+            font-weight: 500;
+        }
+
+        .final-checklist li::before {
+            content: '✅';
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        .final-box {
+            background-color: var(--color-surface);
+            color: var(--color-text-primary);
+            padding: 2.5rem 2rem;
+            border-radius: var(--border-radius-md);
+            text-align: center;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .final-price {
+            font-family: var(--font-display);
+            color: var(--color-accent);
+            font-size: 3.5rem;
+            line-height: 1;
+            margin-bottom: 0.5rem;
+        }
+
+        .final-price-text {
+            color: var(--color-text-secondary);
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .final-phrase {
+            font-style: italic;
+            color: var(--color-primary-dark);
+            font-size: 1.25rem;
+            max-width: 600px;
+            margin: 4rem auto 2rem;
+            line-height: 1.6;
+        }
+
+        .trust-badges {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1rem 2rem;
+            color: var(--color-primary-dark);
+            font-size: 0.85rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .trust-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #0A1F14;
+            color: #ffffff;
+            padding: 3rem 0 2rem;
+            text-align: center;
+        }
+
+        .footer .final-phrase {
+            color: #ffffff;
+            margin-top: 0;
+            margin-bottom: 2rem;
+        }
+
+        .footer .trust-badges {
+            color: #ffffff;
+            border-top: none;
+            padding-top: 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 2rem;
+            margin-bottom: 2rem;
+        }
+        .footer .trust-item {
+            color: #ffffff;
+        }
+
+        .footer-logo {
+            font-family: var(--font-accent);
+            color: #ffffff;
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 0.875rem;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover { color: var(--color-highlight); }
+        
+        .footer-small {
+            font-size: 0.75rem;
+            opacity: 0.7;
+            max-width: 600px;
+            margin: 0 auto;
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Logo -->
+    <header style="text-align: center; padding: 1.5rem 0; background-color: var(--color-surface); box-shadow: var(--shadow-sm);">
+        <img src="./resumos-ilustrados.png" alt="Logo" style="max-height: 120px; width: auto; object-fit: contain;">
+    </header>
+
+    <!-- SECTION 1: Hero -->
+    <section class="hero">
+        <div class="container">
+            <h1 class="hero-title" style="margin-top: 1.5rem;">
+                Você Não Precisa<br>
+                Estudar Mais.<br>
+                Você Precisa<br>
+                Estudar Diferente.
+            </h1>
+            
+            <p class="hero-subtitle">
+                65 páginas visuais e ilustradas com tudo que despenca nas provas de concursos de Nutrição Clínica — organizadas para o seu cérebro fixar de verdade e garantir sua aprovação.
+            </p>
+
+            <div class="video-wrapper">
+                <!-- Substitua o src pelo link de embed do seu vídeo (ex: Vimeo, Panda Video, YouTube Shorts) -->
+                <iframe src="https://www.youtube.com/embed/SEU_VIDEO_AQUI" title="Video de vendas" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+
+            <a href="#" class="btn btn-pulse cta-link" onclick="trackCheckout()" style="display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 1.2rem; gap: 4px; color: #ffffff;">
+                <span style="font-weight: 800; font-size: 1.05rem; letter-spacing: 0.5px; text-align: center;">QUERO MEU MATERIAL AGORA</span>
+                <span style="font-size: 2.2rem; font-weight: 900; line-height: 1;">R$ 37,00</span>
+            </a>
+
+            <div class="hero-security">
+                <i class="fa-solid fa-lock"></i> Pagamento seguro • <i class="fa-solid fa-bolt"></i> Acesso imediato • <i class="fa-solid fa-check-circle"></i> Garantia de 7 dias
+            </div>
+
+            <div class="social-proof">
+                <div class="proof-card"><i class="fa-regular fa-file-lines"></i> 65 Páginas</div>
+                <div class="proof-card"><i class="fa-solid fa-book-open"></i> 7 Módulos</div>
+                <div class="proof-card"><i class="fa-solid fa-medal"></i> Garantia 7 dias</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 2: Lead / Identificação -->
+    <section class="py-16 lead-section">
+        <div class="container">
+            <style>
+                .lead-split { display: grid; gap: 2.5rem; align-items: center; max-width: 1000px; margin: 0 auto; }
+                @media (min-width: 768px) { .lead-split { grid-template-columns: 1fr 1.2fr; } }
+            </style>
+            
+            <h2 class="text-primary mb-8 text-center">Você conhece essa cena?</h2>
+            <div class="lead-split">
+                <div class="lead-image">
+                    <img src="https://placehold.co/500x600/D8F3DC/1B4332?text=Sua+Imagem+Aqui" style="border-radius: 16px; width: 100%; box-shadow: var(--shadow-md);" alt="Cenário de Estudo">
+                </div>
+                <div class="lead-content" style="max-width: 100%;">
+                    <p class="lead-text">
+                        São 23h. A prova do <strong>concurso</strong> está chegando. Você abre o material e olha para aquelas centenas de páginas de livro, slides bagunçados e anotações que você mesmo não consegue mais ler.
+                    </p>
+                    <p class="lead-text">
+                        Uma voz na cabeça diz: <strong>"Não vai dar tempo."</strong> E o pior não é o volume de conteúdo. O pior é saber que você <em>já estudou</em> esse assunto.
+                    </p>
+                    <p class="lead-text">
+                        Mas na hora de responder, os conceitos embaralham — albumina, transferrina, Low FODMAP — tudo vira uma névoa.
+                    </p>
+                    
+                    <div class="highlight-card" style="margin: 1.5rem 0;">
+                        <p>"A maioria dos resumos são blocos de texto que o cérebro lê e esquece em 48 horas."</p>
+                    </div>
+
+                    <p class="lead-text" style="font-weight: 600; color: var(--color-primary-dark);">
+                        Não é falta de esforço. É que ninguém te deu o material certo.
+                    </p>
+                    <p class="lead-transition" style="margin-top: 1rem; text-align: left;">
+                        O que você precisa é de um material que o seu cérebro consiga reter de verdade. Visual, organizado, com lógica clínica.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3: História -->
+    <section class="py-16 history-section">
+        <div class="container">
+            <div class="text-center">
+                <div class="badge badge-secondary">A história da Carolina</div>
+                <h2 class="text-primary">Ela estudou mais do que nunca.<br>E reprovou duas vezes.</h2>
+            </div>
+            
+            <div class="timeline">
+                <div class="timeline-card">
+                    <div class="timeline-icon">😓</div>
+                    <div class="timeline-content">
+                        <p>Nutricionista formada há dois anos. Tentou a residência duas vezes. Na primeira, comprou três livros novos e fez um cronograma rigoroso.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-card">
+                    <div class="timeline-icon">📚</div>
+                    <div class="timeline-content">
+                        <p>Na segunda tentativa, estudou ainda mais. Curso online, slides de professores, caderno de resumos com mais de 200 páginas.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-card">
+                    <div class="timeline-icon">❌</div>
+                    <div class="timeline-content">
+                        <p>Reprovou nas duas. Não por falta de dedicação — mas porque chegava na prova e os conteúdos estavam embaralhados.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-card highlight">
+                    <div class="timeline-icon">💡</div>
+                    <div class="timeline-content">
+                        <p>Foi numa conversa com uma colega aprovada que ela ouviu: <strong>'Eu parei de tentar ler tudo. Comecei a revisar com material visual. Meu cérebro finalmente organizou as informações.'</strong></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="history-conclusion">
+                <p>A Carolina não precisava de mais conteúdo.<br>Ela precisava de um material que respeitasse como o cérebro humano aprende.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 4: Pitch do Produto -->
+    <section class="py-16 pitch-section">
+        <div class="container">
+            <div class="pitch-header">
+                <h2 class="text-primary mb-4">Resumo Ilustrado<br>Nutrição Clínica</h2>
+                <p class="lead-text mb-2">O material que sua faculdade nunca te deu —<br>mas que você precisava desde o primeiro semestre.</p>
+                <div class="feature-banner">
+                    65 páginas • 7 módulos completos • Acesso imediato
+                </div>
+            </div>
+
+            <style>
+                .tabs-container { max-width: 900px; margin: 0 auto 3rem; }
+                .tabs-content { display: flex; flex-direction: column; gap: 4rem; }
+                .tab-pane { display: grid; gap: 1.5rem; align-items: center; }
+                
+                /* Mobile: Texto vem primeiro (order: 1), Imagem depois (order: 2) */
+                .tab-pane > div:nth-child(1) { order: 2; }
+                .tab-pane > div:nth-child(2) { 
+                    order: 1; 
+                    background-color: var(--color-primary-dark); 
+                    padding: 3rem 2rem; 
+                    border-radius: var(--border-radius-lg); 
+                    box-shadow: var(--shadow-lg);
+                    text-align: center;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                }
+                
+                /* Títulos e Alinhamentos */
+                .tab-pane > div:nth-child(2) .module-icon { display: none; }
+                .tab-pane > div:nth-child(2) .module-header { 
+                    display: flex; 
+                    flex-direction: column; 
+                    align-items: center; 
+                    gap: 0.25rem;
+                    margin-bottom: 1.5rem !important;
+                }
+                .tab-pane > div:nth-child(2) .module-number { 
+                    color: var(--color-highlight) !important; 
+                    font-size: 2rem;
+                    line-height: 1;
+                }
+                .tab-pane > div:nth-child(2) .module-title { 
+                    color: var(--color-surface); 
+                    font-size: 1.8rem;
+                    line-height: 1.2;
+                }
+                .tab-pane > div:nth-child(2) p { color: rgba(255, 255, 255, 0.85); font-size: 1.05rem; margin: 0; }
+
+                /* Desktop: Layout ZigZag (Z-Pattern) */
+                @media (min-width: 768px) { 
+                    .tab-pane { grid-template-columns: 1fr 1fr; gap: 3rem; }
+                    /* Pares: Imagem na Esquerda, Texto na Direita */
+                    .tab-pane:nth-child(even) > div:nth-child(1) { order: 1; }
+                    .tab-pane:nth-child(even) > div:nth-child(2) { order: 2; }
+                }
+            </style>
+
+            <div class="tabs-container">
+                <div class="tabs-content">
+                    <!-- Modo 1 -->
+                    <div id="mod1" class="tab-pane active">
+                        <div>
+                            <img src="./cap-01.jpg" alt="Preview Módulo 1" style="border-radius: 12px; width: 100%; box-shadow: var(--shadow-sm);">
+                        </div>
+                        <div>
+                            <div class="module-header" style="margin-bottom: 1rem;">
+                                <div class="module-icon" style="font-size: 2.5rem;">🏥</div>
+                                <div>
+                                    <div class="module-number" style="color: var(--color-primary-light); font-weight: bold; font-family: var(--font-accent);">01</div>
+                                    <h3 class="module-title">Fundamentos da Clínica</h3>
+                                </div>
+                            </div>
+                            <p>Os pilares do atendimento, diagnóstico nutricional, intervenção e monitoramento. A base que sustenta todo o resto — finalmente clara e visual.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Modo 2 -->
+                    <div id="mod2" class="tab-pane">
+                        <div>
+                            <img src="./cap-02.jpg" alt="Preview Módulo 2" style="border-radius: 12px; width: 100%; box-shadow: var(--shadow-sm);">
+                        </div>
+                        <div>
+                            <div class="module-header" style="margin-bottom: 1rem;">
+                                <div class="module-icon" style="font-size: 2.5rem;">📊</div>
+                                <div>
+                                    <div class="module-number" style="color: var(--color-primary-light); font-weight: bold; font-family: var(--font-accent);">02</div>
+                                    <h3 class="module-title">Processo de Cuidado</h3>
+                                </div>
+                            </div>
+                            <p>Antropometria completa, avaliação bioquímica, clínica e dietética. Fórmulas, indicadores e ASG-PPP organizados em esquemas visuais.</p>
+                        </div>
+                    </div>
+
+                    <!-- Modo 3 -->
+                    <div id="mod3" class="tab-pane">
+                        <div>
+                            <img src="./cap-03.jpg" alt="Preview Módulo 3" style="border-radius: 12px; width: 100%; box-shadow: var(--shadow-sm);">
+                        </div>
+                        <div>
+                            <div class="module-header" style="margin-bottom: 1rem;">
+                                <div class="module-icon" style="font-size: 2.5rem;">💊</div>
+                                <div>
+                                    <div class="module-number" style="color: var(--color-primary-light); font-weight: bold; font-family: var(--font-accent);">03</div>
+                                    <h3 class="module-title">Doenças Crônicas</h3>
+                                </div>
+                            </div>
+                            <p>Diabetes, Obesidade, Doença Hepática — classificação, critérios diagnósticos e dietoterapia com tabelas comparativas.</p>
+                        </div>
+                    </div>
+
+                    <!-- Modo 4 -->
+                    <div id="mod4" class="tab-pane">
+                        <div>
+                            <img src="./cap-04.jpg" alt="Preview Módulo 4" style="border-radius: 12px; width: 100%; box-shadow: var(--shadow-sm);">
+                        </div>
+                        <div>
+                            <div class="module-header" style="margin-bottom: 1rem;">
+                                <div class="module-icon" style="font-size: 2.5rem;">🏨</div>
+                                <div>
+                                    <div class="module-number" style="color: var(--color-primary-light); font-weight: bold; font-family: var(--font-accent);">04</div>
+                                    <h3 class="module-title">Terapia Enteral e Parenteral</h3>
+                                </div>
+                            </div>
+                            <p>TNE e TNP completos. Indicações, vias, fórmulas, complicações e Síndrome de Realimentação com lógica clínica real.</p>
+                        </div>
+                    </div>
+
+                    <!-- Modo 5 -->
+                    <div id="mod5" class="tab-pane">
+                        <div>
+                            <img src="./cap-05.jpg" alt="Preview Módulo 5" style="border-radius: 12px; width: 100%; box-shadow: var(--shadow-sm);">
+                        </div>
+                        <div>
+                            <div class="module-header" style="margin-bottom: 1rem;">
+                                <div class="module-icon" style="font-size: 2.5rem;">🔬</div>
+                                <div>
+                                    <div class="module-number" style="color: var(--color-primary-light); font-weight: bold; font-family: var(--font-accent);">05</div>
+                                    <h3 class="module-title">Micronutrientes</h3>
+                                </div>
+                            </div>
+                            <p>Vitaminas A, D, E, K, Complexo B, Ferro, Cálcio, Fósforo e Magnésio. DRIs e interações — sem decorar, entendendo.</p>
+                        </div>
+                    </div>
+
+                    <!-- Modo 6 -->
+                    <div id="mod6" class="tab-pane">
+                        <div>
+                            <img src="./cap-06.jpg" alt="Preview Módulo 6" style="border-radius: 12px; width: 100%; box-shadow: var(--shadow-sm);">
+                        </div>
+                        <div>
+                            <div class="module-header" style="margin-bottom: 1rem;">
+                                <div class="module-icon" style="font-size: 2.5rem;">🤰</div>
+                                <div>
+                                    <div class="module-number" style="color: var(--color-primary-light); font-weight: bold; font-family: var(--font-accent);">06</div>
+                                    <h3 class="module-title">Situações Especiais</h3>
+                                </div>
+                            </div>
+                            <p>Gestação, Lactação, Idoso, SII, DII e Pré/Pós-operatório. Temas que mais aparecem em questões contextualizadas.</p>
+                        </div>
+                    </div>
+
+                    <!-- Modo 7 -->
+                    <div id="mod7" class="tab-pane">
+                        <div>
+                            <img src="./cap-07.jpg" alt="Preview Módulo 7" style="border-radius: 12px; width: 100%; box-shadow: var(--shadow-sm);">
+                        </div>
+                        <div>
+                            <div class="module-header" style="margin-bottom: 1rem;">
+                                <div class="module-icon" style="font-size: 2.5rem;">📋</div>
+                                <div>
+                                    <div class="module-number" style="color: var(--color-primary-light); font-weight: bold; font-family: var(--font-accent);">07</div>
+                                    <h3 class="module-title">Dietoterapia Prática</h3>
+                                </div>
+                            </div>
+                            <p>Fórmulas de peso ideal, estimativa de altura, DRIs consolidadas. O módulo que você vai abrir antes de qualquer atendimento.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="differentials">
+                <ul>
+                    <li>Sem login. Sem plataforma. Sem prazo de acesso.</li>
+                    <li>Baixou — é seu para sempre.</li>
+                    <li>Funciona no celular, tablet e computador.</li>
+                    <li>Pode imprimir se preferir estudar no papel.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 5: Evidência / Ciência -->
+    <section class="py-16 evidence-section">
+        <div class="container">
+            <div class="evidence-header">
+                <div class="badge badge-secondary">🔬 A ciência por trás do método</div>
+                <h2 class="text-primary">Por que o visual funciona<br>melhor que o texto?</h2>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number accent">60.000x</div>
+                    <p>O cérebro processa imagens 60.000 vezes mais rápido que texto</p>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number primary">65%</div>
+                    <p>A aprendizagem visual aumenta a retenção em até 65% comparado ao texto corrido</p>
+                </div>
+            </div>
+
+            <p class="evidence-text">
+                Resumos em bloco de texto fazem você <strong>LER</strong> o conteúdo.<br>
+                Resumos visuais fazem você <strong>FIXAR</strong> o conteúdo.<br>
+                Existe uma diferença enorme entre as duas coisas — e ela aparece na hora da prova.
+            </p>
+
+            <div class="validated-card">
+                <div class="validated-title">
+                    <i class="fa-solid fa-clipboard-check text-primary"></i>
+                    <strong>Conteúdo construído com base nos editais reais</strong>
+                </div>
+                <p>Os 7 módulos cobrem os temas de maior incidência nas provas de residência multiprofissional e uniprofissional em nutrição do Brasil. Não foi montado aleatoriamente. Foi construído de trás pra frente — começando pelo que cai na prova.</p>
+            </div>
+
+            <div class="preview-area">
+                <h3>📄 Material de Alta Qualidade Visual</h3>
+                <div class="preview-tags">
+                    Esquemas • Ilustrações • Tabelas Comparativas • Lógica Clínica
+                </div>
+                <div class="preview-badge" style="margin-bottom: 2rem;">Veja você mesmo — 65 páginas profissionais</div>
+                
+                <!-- Área reservada para inserir imagens de demonstração -->
+                <div class="demo-gallery" style="display: flex; flex-direction: column; gap: 1.5rem; align-items: center; width: 100%; margin-top: 1.5rem;">
+                    <img src="./carrossel-01.jpg" alt="Demonstração 1" style="border-radius: 8px; box-shadow: 0 6px 15px rgba(0,0,0,0.2); width: 100%; max-width: 600px; height: auto;">
+                    <img src="./carrossel-02.jpg" alt="Demonstração 2" style="border-radius: 8px; box-shadow: 0 6px 15px rgba(0,0,0,0.2); width: 100%; max-width: 600px; height: auto;">
+                    <img src="./carrossel-03.jpg" alt="Demonstração 3" style="border-radius: 8px; box-shadow: 0 6px 15px rgba(0,0,0,0.2); width: 100%; max-width: 600px; height: auto;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 6: Oferta / Stack de Valor -->
+    <section class="py-16 offer-section">
+        <div class="container">
+            <div class="badge badge-primary" style="border-color: white;">💰 Investimento</div>
+            <h2>Tudo isso por<br>quanto você acha?</h2>
+
+            <div class="price-compare">
+                <div class="compare-item">Cursinho preparatório: R$1.500–R$3.000</div>
+                <div class="compare-item">Livro completo: R$150–R$300 + tempo de resumo</div>
+                <div class="compare-item">Mentoria especializada: R$200/hora</div>
+            </div>
+
+            <div class="vs-separator">VS</div>
+
+            <style>
+                .premium-offer-card {
+                    background: white;
+                    border: 3px solid var(--color-primary);
+                    border-radius: var(--border-radius-lg);
+                    padding: 3.5rem 2.5rem 2.5rem;
+                    max-width: 480px;
+                    margin: 0 auto 3rem;
+                    position: relative;
+                    box-shadow: 0 30px 60px rgba(27, 67, 50, 0.2);
+                    text-align: center;
+                }
+                .premium-ribbon {
+                    position: absolute;
+                    top: -18px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    background: var(--color-accent);
+                    color: white;
+                    padding: 6px 24px;
+                    border-radius: 50px;
+                    font-weight: 800;
+                    font-size: 0.95rem;
+                    text-transform: uppercase;
+                    letter-spacing: 1px;
+                    box-shadow: 0 4px 10px rgba(244, 162, 97, 0.4);
+                    white-space: nowrap;
+                }
+                .premium-title {
+                    font-family: var(--font-display);
+                    font-size: 2rem;
+                    color: var(--color-primary-dark);
+                    margin-bottom: 0.5rem;
+                    line-height: 1.2;
+                }
+                .premium-price-box {
+                    margin: 2rem 0;
+                    padding: 1.5rem 0;
+                    border-top: 1px dashed var(--color-border);
+                    border-bottom: 1px dashed var(--color-border);
+                }
+                .premium-price-current {
+                    font-family: var(--font-display);
+                    font-size: 5.5rem;
+                    line-height: 1;
+                    font-weight: 900;
+                    color: var(--color-primary);
+                    display: flex;
+                    justify-content: center;
+                    align-items: flex-start;
+                    letter-spacing: -2px;
+                }
+                .premium-price-current span {
+                    font-size: 2rem;
+                    margin-right: 5px;
+                    margin-top: 12px;
+                    letter-spacing: normal;
+                }
+                .premium-list {
+                    list-style: none;
+                    padding: 0;
+                    margin: 2rem 0;
+                    text-align: left;
+                }
+                .premium-list li {
+                    display: flex;
+                    align-items: flex-start;
+                    gap: 12px;
+                    margin-bottom: 1rem;
+                    font-size: 1.05rem;
+                    color: var(--color-text-primary);
+                    line-height: 1.4;
+                }
+                .premium-list i {
+                    color: var(--color-primary-light);
+                    font-size: 1.3rem;
+                    margin-top: 2px;
+                }
+                .premium-btn {
+                    width: 100%;
+                    font-size: 1.15rem;
+                    padding: 1.2rem;
+                    border-radius: 50px;
+                    background: var(--color-accent);
+                    color: white;
+                    font-weight: bold;
+                    text-transform: uppercase;
+                    box-shadow: 0 10px 20px rgba(244, 162, 97, 0.4);
+                    transition: all 0.3s ease;
+                    display: inline-block;
+                    text-decoration: none;
+                }
+                .premium-btn:hover {
+                    transform: translateY(-3px);
+                    box-shadow: 0 15px 25px rgba(244, 162, 97, 0.5);
+                    background: var(--color-accent-hover);
+                }
+                .trust-badges {
+                    font-size: 0.85rem;
+                    margin-top: 1.5rem;
+                    color: var(--color-text-secondary);
+                    display: flex;
+                    justify-content: center;
+                    gap: 1.2rem;
+                    flex-wrap: wrap;
+                }
+                .trust-badges span {
+                    display: flex;
+                    align-items: center;
+                    gap: 5px;
+                }
+            </style>
+
+            <div class="premium-offer-card">
+                <div class="premium-ribbon"><i class="fa-solid fa-fire"></i> Lançamento Exclusivo</div>
+                <div style="margin: 0 auto 1.5rem; text-align: center;">
+                    <img src="./resumos-ilustrados.png" alt="Logo" style="max-height: 60px; width: auto; object-fit: contain;">
+                </div>
+                
+                <div class="premium-price-box">
+                    <div class="price-slashed" style="margin-bottom: 5px; font-size: 1.1rem; color: var(--color-text-secondary); text-decoration: line-through;">De R$ 97,00 por apenas</div>
+                    <div class="premium-price-current"><span>R$</span>37</div>
+                    <p class="price-sub" style="margin-top: 10px; font-size: 0.95rem; font-weight: 500; color: var(--color-text-secondary);">Menos que uma pizza. Impacto direto na sua prova.</p>
+                </div>
+
+                <ul class="premium-list">
+                    <li><i class="fa-solid fa-circle-check"></i> <div><strong>PDF completo</strong> — 65 páginas, 7 módulos</div></li>
+                    <li><i class="fa-solid fa-circle-check"></i> <div><strong>Acesso imediato</strong> na sua caixa de e-mail</div></li>
+                    <li><i class="fa-solid fa-circle-check"></i> <div><strong>Múltiplos dispositivos</strong> (celular, tablet e PC)</div></li>
+                    <li><i class="fa-solid fa-circle-check"></i> <div><strong>Livre para impressão</strong> se preferir no papel</div></li>
+                    <li><i class="fa-solid fa-circle-check"></i> <div><strong>Acesso vitalício</strong> — é seu para sempre</div></li>
+                </ul>
+
+                <a href="#" class="premium-btn btn-pulse" onclick="trackCheckout()" style="color: #ffffff;">
+                    QUERO MEU MATERIAL AGORA
+                </a>
+                
+                <div class="trust-badges">
+                    <span><i class="fa-solid fa-lock" style="color:#10b981;"></i> Compra Segura</span>
+                    <span><i class="fa-solid fa-bolt" style="color:#f59e0b;"></i> Acesso Imediato</span>
+                    <span><i class="fa-solid fa-shield-halved" style="color:#3b82f6;"></i> 7 Dias de Garantia</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 7: Garantia e Urgência -->
+    <section class="py-16 guarantee-section">
+        <div class="container">
+            <div class="guarantee-grid">
+                <div class="g-card safety">
+                    <div class="g-title">
+                        <i class="fa-solid fa-shield-halved text-primary"></i>
+                        <strong>Garantia Incondicional de 7 Dias</strong>
+                    </div>
+                    <p>Baixe o Resumo Ilustrado. Abra. Estude. Use nas suas revisões. Se em até 7 dias você achar que não valeu cada centavo — por qualquer motivo — é só mandar uma mensagem e devolvemos 100% do seu dinheiro. Sem perguntas. Sem burocracia. Sem enrolação.</p>
+                </div>
+
+                <div class="g-card urgency">
+                    <div class="g-title">
+                        <i class="fa-solid fa-clock text-accent"></i>
+                        <strong>Preço de Lançamento</strong>
+                    </div>
+                    <p>O Resumo Ilustrado está sendo lançado agora — e o preço de R$37 é exclusivo para os primeiros compradores. Assim que essa fase de lançamento encerrar, o valor sobe. Se você fechar hoje, garante o menor preço que esse material vai ter.</p>
+                </div>
+            </div>
+
+            <div class="two-choices">
+                <h3 class="choice-title">Você tem duas opções agora.</h3>
+                
+                <div class="choices-wrapper">
+                    <div class="choice-item bad">
+                        <div class="choice-icon">❌</div>
+                        <div>
+                            <p style="color: var(--color-text-primary); margin:0;">Continuar estudando do mesmo jeito — com livros pesados, resumos bagunçados e a sensação de que nunca vai dar tempo.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="choice-item good">
+                        <div class="choice-icon">✅</div>
+                        <div>
+                            <p style="color: var(--color-primary-dark); font-weight: 500; margin:0;">Investir R$37 hoje e finalmente ter na mão um material que respeita como o seu cérebro aprende.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="margin-top: 2rem;">
+                    <a href="#" class="btn btn-pulse cta-link" onclick="trackCheckout()">
+                          QUERO MEU RESUMO AGORA — R$37
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 8: FAQ -->
+    <section class="py-16 faq-section">
+        <div class="container">
+            <h2 class="faq-header text-primary">Perguntas Frequentes</h2>
+
+            <div class="faq-container">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Esse resumo é suficiente para passar na residência?
+                        <i class="fa-solid fa-chevron-down faq-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>O Resumo Ilustrado cobre os temas de Nutrição Clínica mais cobrados nos editais das principais residências do Brasil. Ele não substitui toda a sua preparação — mas é o material de revisão mais completo e eficiente que você vai ter na reta final. Muitos candidatos erram na prova não por não terem estudado, mas por não conseguirem recuperar o conteúdo na hora certa. Esse material resolve exatamente isso.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Como vou receber o material?
+                        <i class="fa-solid fa-chevron-down faq-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Imediatamente após a confirmação do pagamento, você recebe o link de download por e-mail. É um arquivo PDF que você baixa direto no seu dispositivo — sem login, sem plataforma, sem complicação.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Funciona no celular?
+                        <i class="fa-solid fa-chevron-down faq-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Sim. O PDF foi formatado para funcionar perfeitamente em celular, tablet e computador. Você pode estudar em qualquer lugar — no transporte, no intervalo do plantão, onde for.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Posso imprimir?
+                        <i class="fa-solid fa-chevron-down faq-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Pode. Muitos estudantes preferem estudar com o material impresso e à mão. O arquivo é de alta qualidade e fica excelente impresso.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        E se eu já tiver estudado Nutrição Clínica antes?
+                        <i class="fa-solid fa-chevron-down faq-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Melhor ainda. O Resumo Ilustrado não é para quem está vendo o conteúdo pela primeira vez — é para quem quer fixar e organizar o que já estudou. Ele funciona como uma revisão de alto impacto, perfeita para a reta final.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Como funciona a garantia?
+                        <i class="fa-solid fa-chevron-down faq-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Simples. Você tem 7 dias após a compra para pedir reembolso total — sem perguntas, sem justificativa. Basta entrar em contato e devolvemos 100% do valor. Nenhum risco para você.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Esse material é atualizado?
+                        <i class="fa-solid fa-chevron-down faq-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Sim. O conteúdo foi construído com base nas diretrizes mais recentes — incluindo ADA para Diabetes, IOM 2009 para gestação, Critérios Roma IV para SII e protocolo ERAS para perioperatório, entre outros.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Qual a diferença desse resumo para os que encontro de graça na internet?
+                        <i class="fa-solid fa-chevron-down faq-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Os resumos gratuitos são, em sua maioria, textos reduzidos — blocos de bullet points sem organização visual ou lógica clínica. O Resumo Ilustrado foi construído com design profissional, ilustrações, esquemas e tabelas comparativas que ativam a memória visual. A diferença aparece na hora que você abre o material — e na hora da prova.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 9: Fechamento Final -->
+    <section class="py-16 final-section">
+        <div class="container">
+            <h2 class="final-title">Você chegou até aqui<br>por algum motivo.</h2>
+            <p class="final-subtitle">Não foi por acaso.</p>
+
+            <div class="final-grid">
+                <div>
+                    <ul class="final-checklist">
+                        <li>65 páginas visuais e ilustradas</li>
+                        <li>7 módulos completos — o que realmente cai nas provas</li>
+                        <li>Conteúdo alinhado aos editais</li>
+                        <li>Acesso imediato e para sempre</li>
+                        <li>Funciona em qualquer dispositivo</li>
+                        <li>Garantia de 7 dias — risco zero</li>
+                    </ul>
+                </div>
+
+                <div class="final-box">
+                    <div class="final-price">R$37</div>
+                    <p class="final-price-text mb-4">Menos do que um livro usado. Com impacto direto na sua prova.</p>
+                    
+                    <a href="#" class="btn btn-pulse cta-link" onclick="trackCheckout()">
+                          QUERO MEU RESUMO ILUSTRADO AGORA — R$37
+                    </a>
+                    <p style="font-size: 0.8rem; margin-top: 1rem; color: var(--color-text-secondary);">
+                        Clique no botão e garanta acesso imediato.<br>
+                        Preço de lançamento. Garantia incondicional de 7 dias.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p class="final-phrase">
+                "A próxima residência pode ser diferente.<br>
+                Não porque você vai estudar mais.<br>
+                Mas porque você vai estudar certo."
+            </p>
+
+            <div class="trust-badges">
+                <div class="trust-item"><i class="fa-solid fa-lock"></i> Pagamento Seguro</div>
+                <div class="trust-item"><i class="fa-solid fa-bolt"></i> Acesso Imediato</div>
+                <div class="trust-item"><i class="fa-solid fa-mobile-screen-button"></i> Qualquer Dispositivo</div>
+                <div class="trust-item"><i class="fa-solid fa-shield-check"></i> Garantia 7 dias</div>
+            </div>
+
+            <p style="color: #ffffff;">© 2026 Resumos Ilustrados - Nutrição Clínica. Todos os direitos reservados.</p>
+            
+            <div class="footer-links">
+                <a href="#">Política de Privacidade</a>
+                <a href="#">Termos de Uso</a>
+                <a href="#">Contato</a>
+            </div>
+            
+            <p class="footer-small">
+                Este produto é entregue digitalmente. Após a confirmação do pagamento, você receberá o acesso por e-mail.
+            </p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // --- 1. Timer de contagem regressiva 24h ---
+        function startTimer() {
+            const timerElement = document.getElementById('countdown-timer');
+            // Check if there's a saved expiration time in localStorage
+            let expirationTime = localStorage.getItem('resumo_ilustrado_timer');
+            const now = new Date().getTime();
+
+            // If no expiration time or it has passed, set a new one (24h from now)
+            if (!expirationTime || now > parseInt(expirationTime)) {
+                expirationTime = now + (24 * 60 * 60 * 1000);
+                localStorage.setItem('resumo_ilustrado_timer', expirationTime);
+            }
+
+            // Update timer every second
+            const interval = setInterval(function() {
+                const currentTime = new Date().getTime();
+                const distance = parseInt(expirationTime) - currentTime;
+
+                // Time calculations for hours, minutes and seconds
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                // Add leading zero if needed
+                const h = hours < 10 ? '0' + hours : hours;
+                const m = minutes < 10 ? '0' + minutes : minutes;
+                const s = seconds < 10 ? '0' + seconds : seconds;
+
+                timerElement.innerText = h + ":" + m + ":" + s;
+
+                // If timer reaches 0, reset it
+                if (distance < 0) {
+                    clearInterval(interval);
+                    localStorage.removeItem('resumo_ilustrado_timer');
+                    startTimer(); // Restart the 24h loop
+                }
+            }, 1000);
+        }
+
+        // --- Funcionalidade das Abas ---
+        function initTabs() {
+            const tabBtns = document.querySelectorAll('.tab-btn');
+            const tabPanes = document.querySelectorAll('.tab-pane');
+            
+            tabBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const targetId = btn.getAttribute('data-target');
+                    
+                    tabBtns.forEach(b => b.classList.remove('active'));
+                    tabPanes.forEach(p => p.classList.remove('active'));
+                    
+                    btn.classList.add('active');
+                    document.getElementById(targetId).classList.add('active');
+                });
+            });
+        }
+
+        // --- 2. Sticky Header ---
+        function initStickyHeader() {
+            const header = document.getElementById('sticky-header');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 100) {
+                    header.classList.add('visible');
+                } else {
+                    header.classList.remove('visible');
+                }
+            });
+        }
+
+        // --- 3. FAQ Accordion ---
+        function initFaq() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', () => {
+                    // Close all other items
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    // Toggle current item
+                    item.classList.toggle('active');
+                });
+            });
+        }
+
+        // --- 4. Meta Pixel Track Checkout Event ---
+        function trackCheckout() {
+            if (typeof fbq === 'function') {
+                fbq('track', 'InitiateCheckout', {
+                    value: 37.00,
+                    currency: 'BRL',
+                    content_name: 'Resumo Ilustrado - Nutrição Clínica'
+                });
+            }
+        }
+
+        // Initialize all scripts when DOM is loaded
+        document.addEventListener('DOMContentLoaded', () => {
+            startTimer();
+            if(document.querySelector('.tab-btn')) initTabs();
+            initStickyHeader();
+            initFaq();
+        });
+    </script>
+</body>
+</html>
+
+
+
+
+
+
