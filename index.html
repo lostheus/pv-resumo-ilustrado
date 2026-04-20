@@ -1448,19 +1448,151 @@
         </div>
     </section>
 
+    <!-- BÔNUS SECTION -->
+    <section class="py-16 bonus-section" style="background-color: var(--color-background);">
+        <div class="container">
+            <div class="text-center mb-8">
+                <div class="badge badge-primary" style="background-color: rgba(255, 122, 0, 0.1); border-color: var(--color-accent); color: var(--color-accent);"><i class="fa-solid fa-gift"></i> Bônus Inclusos</div>
+                <h2 class="text-primary mb-4">Quem garante hoje, leva 5 Bônus Especiais</h2>
+                <p class="lead-text" style="max-width: 700px; margin: 0 auto;">Preparamos 5 materiais complementares práticos e visuais para acelerar ainda mais sua rotina de estudos e atendimentos.</p>
+            </div>
+
+            <style>
+                .bonus-grid {
+                    display: grid;
+                    grid-template-columns: 1fr;
+                    gap: 2rem;
+                    max-width: 800px;
+                    margin: 0 auto;
+                }
+                .bonus-card {
+                    background-color: var(--color-surface);
+                    border: 2px solid var(--color-primary-light);
+                    border-radius: var(--border-radius-lg);
+                    padding: 3rem 2rem;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    text-align: center;
+                    transition: transform 0.3s;
+                    box-shadow: var(--shadow-md);
+                }
+                @media (min-width: 768px) {
+                    .bonus-card {
+                        padding: 4rem 3rem;
+                    }
+                }
+                .bonus-card:hover {
+                    transform: translateY(-5px);
+                    box-shadow: var(--shadow-lg);
+                    border-color: var(--color-primary);
+                }
+                .bonus-icon {
+                    background-color: var(--color-highlight);
+                    color: var(--color-primary-dark);
+                    width: 80px;
+                    height: 80px;
+                    border-radius: 20px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 2.5rem;
+                    margin-bottom: 1.5rem;
+                }
+                .bonus-label {
+                    color: var(--color-accent);
+                    font-weight: 800;
+                    font-size: 1.25rem;
+                    margin-bottom: 0.5rem;
+                    text-transform: uppercase;
+                    letter-spacing: 0.5px;
+                }
+                .bonus-content h3 {
+                    font-size: 1.75rem;
+                    color: var(--color-primary-dark);
+                    margin-bottom: 1rem;
+                    line-height: 1.2;
+                    font-family: var(--font-display);
+                }
+                .bonus-content p {
+                    font-size: 1.1rem;
+                    color: var(--color-text-secondary);
+                    margin: 0 auto 1.5rem;
+                    line-height: 1.6;
+                    max-width: 600px;
+                }
+                .bonus-quote {
+                    font-size: 0.95rem;
+                    font-style: italic;
+                    color: var(--color-primary-dark);
+                    font-weight: 600;
+                    background-color: rgba(216, 243, 220, 0.4);
+                    padding: 0.75rem 1.5rem;
+                    border: 1px solid var(--color-primary-light);
+                    border-radius: 50px;
+                    display: inline-block;
+                }
+            </style>
+
+            <div class="bonus-grid">
+                <div class="bonus-card">
+                    <div class="bonus-icon"><i class="fa-solid fa-list-check"></i></div>
+                    <div class="bonus-content">
+                        <div class="bonus-label">🎁 Bônus 1:</div>
+                        <h3>Checklist da Avaliação Nutricional</h3>
+                        <p>Uma anamnese às cegas é o primeiro passo para o erro. Receba uma folha única para imprimir e ter um passo a passo milimetrado. Ganhe precisão clínica e demonstre total confiança no seu consultório.</p>
+                        <div class="bonus-quote">"Nunca esqueça nenhum passo da sua avaliação"</div>
+                    </div>
+                </div>
+
+                <div class="bonus-card">
+                    <div class="bonus-icon"><i class="fa-solid fa-pills"></i></div>
+                    <div class="bonus-content">
+                        <div class="bonus-label">🎁 Bônus 2:</div>
+                        <h3>Tabela de Interações Droga-Nutriente</h3>
+                        <p>Os 20 medicamentos mais prescritos organizados em uma tabela de altíssimo valor. Elimine riscos de falha terapêutica listando interações com nutrientes em apenas 10 segundos.</p>
+                        <div class="bonus-quote">"Cole na parede do seu consultório"</div>
+                    </div>
+                </div>
+
+                <div class="bonus-card">
+                    <div class="bonus-icon"><i class="fa-solid fa-calculator"></i></div>
+                    <div class="bonus-content">
+                        <div class="bonus-label">🎁 Bônus 3:</div>
+                        <h3>Card das Fórmulas Essenciais</h3>
+                        <p>Harris-Benedict, Mifflin, % perda de peso, BN, CMB, AMBc. Todas as fórmulas indispensáveis que despencam em provas — e que você precisa na rotina — reunidas num card visual prático.</p>
+                        <div class="bonus-quote">"Todas as fórmulas vitais em um lugar só"</div>
+                    </div>
+                </div>
+
+                <div class="bonus-card">
+                    <div class="bonus-icon"><i class="fa-solid fa-notes-medical"></i></div>
+                    <div class="bonus-content">
+                        <div class="bonus-label">🎁 Bônus 4:</div>
+                        <h3>Guia Rápido de Dietoterapia por Patologia</h3>
+                        <p>DM, obesidade, DRC, câncer. Um mapa direto da dietoterapia: (Doença → Kcal/kg → Proteína → Restrições). Pare de ter retrabalho buscando por conta e prescreva com exatidão.</p>
+                        <div class="bonus-quote">"Consulta rápida e segura para o dia a dia clínico"</div>
+                    </div>
+                </div>
+
+                <div class="bonus-card">
+                    <div class="bonus-icon"><i class="fa-solid fa-brain"></i></div>
+                    <div class="bonus-content">
+                        <div class="bonus-label">🎁 Bônus 5:</div>
+                        <h3>Mapa Mental das DRIs</h3>
+                        <p>Os micronutrientes mais cobrados organizados visualmente. Substitua a decoreba ineficiente de tabelas infinitas e fixe os grupos na mente com a lógica do nosso material gráfico exclusivo.</p>
+                        <div class="bonus-quote">"Estude as DRIs uma vez e nunca mais esqueça"</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- SECTION 6: Oferta / Stack de Valor -->
     <section id="oferta" class="py-16 offer-section">
         <div class="container">
 
-            <h2>Tudo isso por<br>quanto você acha?</h2>
-
-            <div class="price-compare">
-                <div class="compare-item">Cursinho preparatório: R$1.500–R$3.000</div>
-                <div class="compare-item">Livro completo: R$150–R$300 + tempo de resumo</div>
-                <div class="compare-item">Mentoria especializada: R$200/hora</div>
-            </div>
-
-            <div id="direto-pro-checkout" class="vs-separator" style="scroll-margin-top: 3rem;">VS</div>
+            <h2 id="direto-pro-checkout" style="margin-bottom: 2rem; scroll-margin-top: 3rem;">Por apenas</h2>
 
             <style>
                 .premium-offer-card {
@@ -1589,6 +1721,7 @@
 
                 <ul class="premium-list">
                     <li><i class="fa-solid fa-circle-check"></i> <div><strong>PDF completo</strong> — 65 páginas, 7 módulos</div></li>
+                    <li><i class="fa-solid fa-gift" style="color: var(--color-accent);"></i> <div><strong>5 Bônus Exclusivos</strong> — Práticos e diretos para o dia a dia</div></li>
                     <li><i class="fa-solid fa-circle-check"></i> <div><strong>Acesso imediato</strong> na sua caixa de e-mail</div></li>
                     <li><i class="fa-solid fa-circle-check"></i> <div><strong>Múltiplos dispositivos</strong> (celular, tablet e PC)</div></li>
                     <li><i class="fa-solid fa-circle-check"></i> <div><strong>Livre para impressão</strong> se preferir no papel</div></li>
